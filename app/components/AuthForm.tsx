@@ -14,11 +14,12 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { Link } from "lucide-react"
+import Link from "next/link"
 
 const formSchema = z.object({
   username: z.string().min(2).max(50),
 })
+
 
 function AuthForm({type}:{type:FormType}) {
     // 1. Define your form.
@@ -58,3 +59,4 @@ const SignIn= type=='sign-in';
 }
 
 export default AuthForm
+  
